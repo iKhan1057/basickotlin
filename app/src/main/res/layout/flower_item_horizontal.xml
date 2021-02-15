@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/list_item_selector"
+    android:padding="8dp">
+
+    <!-- Add in TextView to display flower name   -->
+    <TextView
+        android:id="@+id/flower_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/item_selector"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</RelativeLayout>

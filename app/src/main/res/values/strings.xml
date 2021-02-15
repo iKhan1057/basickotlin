@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">GL</string>
+    <string name="citi_text">You\'ve Been Approved for a \nCiti<super>&#174;</super> Double Cash Card!</string>
+    <string name="terms"><![CDATA[See Your Tems & Condition >]]></string>
+    <string name="credit_score"><![CDATA[View Your Credit Score >]]></string>
+
+
+    <!--Password-->
+    <string name="pass_guidelines">Password Guidelines</string>
+    <string name="pass">Password</string>
+    <string name="setup_pass">Set Up Password</string>
+    <string name="password">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`!@#$%&amp;*^()_|/\\~-</string>
+    <string name="no_icon">No digital images or icons</string>
+    <string name="no_space">No spaces</string>
+    <string name="diff_no_user">Different from userid</string>
+    <string name="no_repeat">No more than 2 consecutive identical characters</string>
+    <string name="num">Atleast 1 number</string>
+    <string name="alphabet">Atleast 1 letter</string>
+    <string name="special_char">`!@#$%&amp;*^()_|/\\~-</string>
+    <string name="special_chars"><![CDATA[Allowed special characters(optional):\n ~!@#$%^&*()_-/|]]></string>
+    <string name="char_count">Include between 6-50 characters</string>
+    <string name="char_count_user">5-50 characters</string>
+    <string name="composition_user">Composed of only letters, numbers, periods, @, or underscore(_)</string>
+    <string name="no_ssn">"Does not use the last 4 digits of your SSN "</string>
+    <string name="digits_user">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.@_</string>
+
+
+    <!-- Add in flower names  -->
+    <string-array name="flower_array">
+        <item>Lily1</item>
+        <item>Poppy2</item>
+        <item>Sunflower3</item>
+        <item>Freesia4</item>
+        <item>Daisy5</item>
+        <item>Rose6</item>
+        <item>Daffodil7</item>
+        <item>Lavender8</item>
+        <item>Peony9</item>
+        <item>Lilac10</item>
+        <item>Dahlia11</item>
+        <item>Tulip12</item>
+        <item>Dandelion13</item>
+    </string-array>
+
+    <!-- Add in company names  -->
+    <string-array name="company_array">
+        <item>Tata1</item>
+        <item>Apple2</item>
+        <item>Ford3</item>
+        <item>Tesla4</item>
+        <item>Samsung5</item>
+        <item>Wipro6</item>
+        <item>Accenture7</item>
+    </string-array>
+</resources>

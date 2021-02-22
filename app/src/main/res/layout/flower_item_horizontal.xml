@@ -6,6 +6,7 @@
     android:background="@drawable/list_item_selector"
     android:padding="8dp">
 
+
     <!-- Add in TextView to display flower name   -->
     <TextView
         android:id="@+id/flower_text"

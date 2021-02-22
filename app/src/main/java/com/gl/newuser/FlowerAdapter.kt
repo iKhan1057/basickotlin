@@ -56,7 +56,7 @@ class FlowerAdapter(
         }
     }
 
-    public fun getNameList(): ArrayList<DataModel> {
+    fun getNameList(): ArrayList<DataModel> {
         return flowerList
     }
 

@@ -1,11 +1,13 @@
 package com.gl.recyclerv
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.gl.R
+
 
 class RecyclerVActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +19,12 @@ class RecyclerVActivity : AppCompatActivity() {
         recy_user.setHasFixedSize(true)
         val layoutManager = LinearLayoutManager(this)
         recy_user.setLayoutManager(layoutManager)
+//        val mLayoutManager =
+//            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+//        recy_user.setLayoutManager(mLayoutManager)
         recy_user.setItemAnimator(DefaultItemAnimator())
         recy_user.adapter = FlowerAdapter(this, flowerList)
+
+
     }
 }

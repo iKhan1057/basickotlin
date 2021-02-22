@@ -11,7 +11,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        val btn_seekbar: Button = findViewById(R.id.btn_seekbar)
+        btn_seekbar.setOnClickListener {
+            val intent = Intent(this@MainActivity, SeekArcActivity::class.java)
+            intent.putExtra("key", "Kotlin")
+            startActivity(intent)
+        }
         val login_click: Button = findViewById(R.id.btn_login)
         login_click.setOnClickListener {
             val intent = Intent(this@MainActivity, NewUserActivity::class.java)
@@ -26,9 +31,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
-
 
 
 }

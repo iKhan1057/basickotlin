@@ -20,15 +20,17 @@ import com.google.android.material.textfield.TextInputEditText
 
 class NewUserActivity : AppCompatActivity(), FlowerAdapter.Callback {
     private var isSelected: Boolean = false
+    lateinit var dataselected: DataModel
+    lateinit var recy_user: RecyclerView
+    lateinit var recy_adapter: FlowerAdapter
+    val flowerList = ArrayList<DataModel>()
+
     lateinit var lin_suggested_user: LinearLayout
     lateinit var lin_suggested_user_error: LinearLayout
     lateinit var et_user_name: TextInputEditText
     lateinit var txt_already_taken_error: TextView
     lateinit var lin_parent: ScrollView
-    lateinit var dataselected: DataModel
-    lateinit var recy_user: RecyclerView
-    lateinit var recy_adapter: FlowerAdapter
-    val flowerList = ArrayList<DataModel>()
+
     private val regOneLetter = ".*[a-zA-Z]+.*";
     private val regOneNo = ".*\\d.*"
     override fun onCreate(savedInstanceState: Bundle?) {

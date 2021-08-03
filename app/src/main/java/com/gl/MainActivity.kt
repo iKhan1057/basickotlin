@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.e.myfeeds.FeedsActivity
 import com.gl.newuser.NewUserActivity
 import com.gl.recyclerv.RecyclerVActivity
 
@@ -30,6 +31,16 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("key", "Kotlin")
             startActivity(intent)
         }
+
+        val btn_feeds:Button = findViewById(R.id.btn_feeds)
+        btn_feeds.setOnClickListener {
+            val intent = Intent(this@MainActivity, FeedsActivity::class.java)
+            intent.putExtra("key", "Kotlin")
+            startActivity(intent)
+        }
+
+
+
     }
 
 

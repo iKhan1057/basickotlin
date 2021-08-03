@@ -8,16 +8,17 @@
 
     <com.e.myseekbar.ArcSeekBar
         android:id="@+id/arcseek"
-        android:layout_width="120dp"
-        android:layout_height="90dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        app:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:progressBackgroundColor="@color/blue"
-        app:progressBackgroundWidth="20dp"
+        app:progressBackgroundWidth="10dp"
         app:progressColor="@color/red"
-        app:progressWidth="20dp"
+        app:progressWidth="10dp"
         app:roundEdges="false"
-        app:thumb="@android:color/transparent" />
+        app:thumb="@drawable/thumb" />
 </androidx.constraintlayout.widget.ConstraintLayout>

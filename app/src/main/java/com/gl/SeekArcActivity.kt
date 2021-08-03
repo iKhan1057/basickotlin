@@ -7,9 +7,10 @@ import com.e.myseekbar.ArcSeekBar
 class SeekArcActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_token)
+        setContentView(R.layout.activity_arc_seek)
 
         val arcseek: ArcSeekBar = findViewById(R.id.arcseek)
-        arcseek.progress = 35
+        arcseek.progress = 50
+
     }
 }

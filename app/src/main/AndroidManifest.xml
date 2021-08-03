@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GL">
-        <activity android:name=".SeekArcActivity"></activity>
+        <activity android:name=".tokentext.TextTokenActivity"/>
+        <activity android:name=".SeekArcActivity" />
         <activity android:name=".newuser.NewPassActivity" />
         <activity android:name=".termscondition.TermsAndConditionsActivity" />
         <activity android:name=".newuser.NewUserActivity" />

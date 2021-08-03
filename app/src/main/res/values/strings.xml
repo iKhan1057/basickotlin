@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GL</string>
+    <string name="app_name">kotlin basics</string>
     <string name="citi_text">You\'ve Been Approved for a \nCiti<super>&#174;</super> Double Cash Card!</string>
     <string name="terms"><![CDATA[See Your Tems & Condition >]]></string>
     <string name="credit_score"><![CDATA[View Your Credit Score >]]></string>

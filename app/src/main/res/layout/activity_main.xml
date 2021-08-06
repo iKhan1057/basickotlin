@@ -17,29 +17,33 @@
 
         <Button
             android:id="@+id/btn_seekbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:text="seekbar" />
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:layout_gravity="center_horizontal"
             android:text="Login" />
 
         <Button
             android:id="@+id/btn_recycler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:text="RecyclerView" />
 
         <Button
             android:id="@+id/btn_feeds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:text="Feeds" />
     </LinearLayout>

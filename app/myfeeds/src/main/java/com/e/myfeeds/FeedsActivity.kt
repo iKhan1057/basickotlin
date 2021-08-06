@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +15,7 @@ import com.e.myfeeds.models.Feeds
 import com.e.myfeeds.models.FeedsModel
 import com.e.myfeeds.parser.AssetParser
 import com.google.gson.Gson
+import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 
 class FeedsActivity : AppCompatActivity() {
@@ -25,6 +27,12 @@ class FeedsActivity : AppCompatActivity() {
     }
 
     private fun initviews() {
+        val img_add_new: CircleImageView = findViewById(R.id.img_add_new)
+        img_add_new.setOnClickListener {
+            val intent = Intent(this, AddFeedActivity::class.java)
+            startActivity(intent)
+        }
+
         val json = AssetParser.loadJSONFromAssets(this, "", "feeds")
         val feeddata = Gson().fromJson(json, FeedsModel::class.java)
 
@@ -58,10 +66,4 @@ class FeedsActivity : AppCompatActivity() {
         super.onPause()
         unregisterReceiver(broadCastReceiver);
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        unregisterReceiver(broadCastReceiver)
-    }
-
 }

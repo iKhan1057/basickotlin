@@ -9,5 +9,5 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginBottom="@dimen/_5sdp"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 </androidx.constraintlayout.widget.ConstraintLayout>

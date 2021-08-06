@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFeedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:onClick="openCamera"
+            android:text="Camera" />
+
+        <Button
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:onClick="openGallery"
+            android:text="Gallary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_added_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <com.e.pageindicator.PageIndicator
+            android:id="@+id/recy_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 class Feed_images {
     @SerializedName("image")
-    val image: String = ""
+    var image: String = ""
     @SerializedName("id")
-    val id: Int = 1
+    var id: Int = 1
     @SerializedName("time")
-    val time: String = ""
+    var time: String = ""
 }

@@ -10,7 +10,25 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy_feeds"
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@color/white" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@color/white"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_add_new"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@drawable/ic_plus_circled_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.e.myfeeds.adapter
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +11,11 @@ import com.e.myfeeds.FeedsActivity
 import com.e.myfeeds.R
 import com.e.myfeeds.models.Feed_images
 
-class FeedImagesAdapter(val activity: FeedsActivity, val images: List<Feed_images>) :
+class FeedImagesAdapter(val activity: Activity, val images: List<Feed_images>) :
     RecyclerView.Adapter<FeedImagesAdapter.FeedImageViewHolder>() {
 
     class FeedImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(activity: FeedsActivity, feedImages: Feed_images) {
+        fun bind(activity: Activity, feedImages: Feed_images) {
             val posted_image: AppCompatImageView = itemView.findViewById(R.id.posted_image)
             Glide.with(activity)
                 .load(feedImages.image)

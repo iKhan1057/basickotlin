@@ -1,10 +1,11 @@
 package com.e.myfeeds.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Feeds {
+class Feeds : Serializable{
     @SerializedName("id")
     var id: Int = 1
     @SerializedName("time")
@@ -14,7 +15,7 @@ class Feeds {
     @SerializedName("posted_by")
     var posted_by: Posted_by = Posted_by()
     @SerializedName("feed_images")
-    var feed_images: List<Feed_images> = ArrayList()
+    var feed_images: MutableList<Feed_images> = ArrayList()
     @SerializedName("feed_interactions")
     var feed_interactions: Feed_interactions = Feed_interactions()
 

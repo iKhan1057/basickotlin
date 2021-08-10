@@ -17,10 +17,12 @@ import com.e.myfeeds.models.Feed_images
 import com.e.myfeeds.models.Feeds
 import com.e.myfeeds.models.FeedsModel
 import com.e.pageindicator.PageIndicator
+import java.util.*
+import kotlin.collections.ArrayList
 
 class AddFeedActivity : AppCompatActivity() {
-    var feedmodel = FeedsModel()
-    var feeds: List<Feeds> = ArrayList()
+
+    var feeds = Feeds()
     var feed_images: MutableList<Feed_images> = ArrayList()
     var feedimageAdapter = FeedImagesAdapter(this, feed_images)
     lateinit var recy_added_image: RecyclerView
@@ -28,7 +30,7 @@ class AddFeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_feed)
 
-        recy_added_image     = findViewById(R.id.recy_added_image)
+        recy_added_image = findViewById(R.id.recy_added_image)
         val recy_page_indicator: PageIndicator = findViewById(R.id.recy_page_indicator)
         val linearSnapHelper: LinearSnapHelper = FeedsAdapter.SnapHelperOneByOne()
 
@@ -51,13 +53,13 @@ class AddFeedActivity : AppCompatActivity() {
             if (result.resultCode == Activity.RESULT_OK) {
                 val data: Intent? = result.data
                 if (data != null) {
-                    var  feedimages= Feed_images()
+                    val feedimages = Feed_images()
                     val path = data.getStringExtra("get_image_path")
                     val uri = data.getStringExtra("image_uri")
-                    feedimages.image = uri.toString()
+                    feedimages.image = path.toString()
                     feed_images.add(feedimages)
                     feedimageAdapter.notifyDataSetChanged()
-                    recy_added_image.scrollToPosition((feed_images.size-1))
+                    recy_added_image.scrollToPosition((feed_images.size - 1))
                 }
             }
         }
@@ -76,6 +78,17 @@ class AddFeedActivity : AppCompatActivity() {
         intent.putExtra("camera", "0")
         intent.putExtra("gallery", "1")
         launchSomeActivity.launch(intent)
+    }
+
+    fun addFeed(view: View) {
+        feeds.posted_time = Date().toString()
+        feeds.time = Date().toString()
+        feeds.feed_images = feed_images
+        val intent = Intent()
+        intent.putExtra("FEEDDATA", feeds)
+        intent.action = "NEW_FEED_ADDED"
+        sendBroadcast(intent)
+        finish()
     }
 
 }

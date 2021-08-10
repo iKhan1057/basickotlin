@@ -23,23 +23,19 @@ import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 
 
-class FeedsAdapter(val activity: FeedsActivity, val feeddata: List<Feeds>) :
+class FeedsAdapter(val activity: FeedsActivity, val feeddata: MutableList<Feeds>) :
     RecyclerView.Adapter<FeedsAdapter.FeedsViewHolder>() {
     var isUpdateTime: Boolean = false
 
     class FeedsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(feeds: Feeds, activity: FeedsActivity, isUpdateTime: Boolean) {
-            when {
-                !isUpdateTime -> {
-                    postedby(feeds.posted_by, activity)
-                    postedImages(feeds.feed_images, activity)
-                    postInteraction(feeds.feed_interactions, activity)
-                    val feed_options: AppCompatImageView = itemView.findViewById(R.id.feed_options)
-                    feed_options.setOnClickListener {
-                        Toast.makeText(activity, feeds.id.toString(), Toast.LENGTH_SHORT).show()
-                    }
-                }
+            postedby(feeds.posted_by, activity)
+            postedImages(feeds.feed_images, activity, isUpdateTime)
+            postInteraction(feeds.feed_interactions, activity)
+            val feed_options: AppCompatImageView = itemView.findViewById(R.id.feed_options)
+            feed_options.setOnClickListener {
+                Toast.makeText(activity, feeds.id.toString(), Toast.LENGTH_SHORT).show()
             }
             val posted_by_time: TextView = itemView.findViewById(R.id.posted_by_time)
             feeds.posted_time.also { posted_by_time.text = it }
@@ -56,7 +52,11 @@ class FeedsAdapter(val activity: FeedsActivity, val feeddata: List<Feeds>) :
             feedInteractions.share.also { " $it".also { feed_share_count.text = it } }
         }
 
-        private fun postedImages(feedImages: List<Feed_images>, activity: FeedsActivity) {
+        private fun postedImages(
+            feedImages: List<Feed_images>,
+            activity: FeedsActivity,
+            isUpdateTime: Boolean
+        ) {
             val recy_page_indicator: PageIndicator = itemView.findViewById(R.id.recy_page_indicator)
             val recy_posted_image: RecyclerView = itemView.findViewById(R.id.recy_posted_image)
             val linearSnapHelper: LinearSnapHelper = SnapHelperOneByOne()
@@ -73,7 +73,8 @@ class FeedsAdapter(val activity: FeedsActivity, val feeddata: List<Feeds>) :
             val feedimageAdapter = FeedImagesAdapter(activity, feedImages)
             recy_posted_image.adapter = feedimageAdapter
             recy_page_indicator.attachTo(recy_posted_image)
-            linearSnapHelper.attachToRecyclerView(recy_posted_image)
+            if (!isUpdateTime)
+                linearSnapHelper.attachToRecyclerView(recy_posted_image)
         }
 
         private fun postedby(postedBy: Posted_by, activity: FeedsActivity) {
@@ -171,6 +172,10 @@ class FeedsAdapter(val activity: FeedsActivity, val feeddata: List<Feeds>) :
                 RecyclerView.NO_POSITION
             } else currentPosition
         }
+    }
+
+    public fun feedsOfAdapter(): MutableList<Feeds> {
+        return feeddata
     }
 
 }

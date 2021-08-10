@@ -1,8 +1,9 @@
 package com.e.myfeeds.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-class Feed_images {
+class Feed_images : Serializable {
     @SerializedName("image")
     var image: String = ""
     @SerializedName("id")

@@ -1,12 +1,13 @@
 package com.e.myfeeds.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-class Posted_by {
+class Posted_by :Serializable {
     @SerializedName("profile_pic")
-    val profile_pic: String = ""
+    var profile_pic: String = ""
     @SerializedName("id")
-    val id: Int = 1
+    var id: Int = 1
     @SerializedName("name")
-    val name: String = ""
+    var name: String = ""
 }

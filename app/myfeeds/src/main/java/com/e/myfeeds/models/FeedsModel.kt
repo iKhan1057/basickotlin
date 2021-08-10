@@ -1,8 +1,9 @@
 package com.e.myfeeds.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-class FeedsModel {
+class FeedsModel : Serializable {
     @SerializedName("feeds")
-    val feeds: List<Feeds> = ArrayList()
+    var feeds: MutableList<Feeds> = ArrayList()
 }

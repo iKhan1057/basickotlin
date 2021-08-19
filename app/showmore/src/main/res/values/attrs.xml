@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShowMore">
+        <attr name="maxtextlength" format="integer" />
+        <attr name="contenttext" format="string" />
+        <attr name="seemoretext" format="string"/>
+        <attr name="seelesstext" format="string"/>
+        <attr name="morecolor" format="integer"/>
+        <attr name="lesscolor" format="integer"/>
+    </declare-styleable>
+</resources>

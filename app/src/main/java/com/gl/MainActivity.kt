@@ -12,6 +12,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val btn_showmore: Button = findViewById(R.id.btn_showmore)
+        btn_showmore.setOnClickListener {
+            val intent = Intent(this@MainActivity, ShowMoreActivity::class.java)
+            intent.putExtra("key", "Kotlin")
+            startActivity(intent)
+        }
+
+
         val btn_seekbar: Button = findViewById(R.id.btn_seekbar)
         btn_seekbar.setOnClickListener {
             val intent = Intent(this@MainActivity, SeekArcActivity::class.java)
@@ -32,13 +41,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btn_feeds:Button = findViewById(R.id.btn_feeds)
+        val btn_feeds: Button = findViewById(R.id.btn_feeds)
         btn_feeds.setOnClickListener {
             val intent = Intent(this@MainActivity, FeedsActivity::class.java)
             intent.putExtra("key", "Kotlin")
             startActivity(intent)
         }
-
 
 
     }

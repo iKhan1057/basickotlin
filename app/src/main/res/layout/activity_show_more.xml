@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ShowMoreActivity">
+
+    <com.e.showmore.ShowMore
+        android:id="@+id/txt_showmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        custom:contenttext="Acumataed stores"
+        custom:maxtextlength="50"
+        custom:seemoretext="more"
+        custom:morecolor="@color/purple_500"
+        custom:lesscolor="@color/teal_700"
+        custom:seelesstext="less"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

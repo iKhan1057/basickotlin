@@ -19,11 +19,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         custom:contenttext="Acumataed stores"
-        custom:maxtextlength="50"
-        custom:seemoretext="more"
-        custom:morecolor="@color/purple_500"
         custom:lesscolor="@color/teal_700"
-        custom:seelesstext="less"/>
+        custom:maxtextlength="50"
+        custom:morecolor="@color/purple_500"
+        custom:seelesstext="less"
+        custom:seemoretext="more" />
+
+
+    <com.e.showmore.ShowMoreDialog
+        android:id="@+id/showmore_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_showmore" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

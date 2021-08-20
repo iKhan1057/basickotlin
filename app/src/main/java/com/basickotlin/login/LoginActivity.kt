@@ -1,15 +1,13 @@
-package com.gl.login
+package com.basickotlin.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.gl.R
-import com.gl.confirmation.ConfirmationActivity
-import com.gl.recyclerv.RecyclerVActivity
+import com.basickotlin.R
+import com.basickotlin.confirmation.ConfirmationActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {

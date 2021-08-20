@@ -1,4 +1,4 @@
-package com.gl.newuser
+package com.basickotlin.newuser
 
 import android.content.Context
 import android.content.Intent
@@ -11,9 +11,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.gl.R
-import com.gl.confirmation.ConfirmationActivity
-import com.gl.views.RoundedBottomSheetDialog
+import com.basickotlin.R
+import com.basickotlin.confirmation.ConfirmationActivity
+import com.basickotlin.views.RoundedBottomSheetDialog
 import com.google.android.material.textfield.TextInputEditText
 import java.util.*
 import java.util.regex.Pattern

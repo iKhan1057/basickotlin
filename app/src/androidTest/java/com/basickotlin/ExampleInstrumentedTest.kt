@@ -1,4 +1,4 @@
-package com.gl
+package com.basickotlin
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

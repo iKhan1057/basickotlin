@@ -1,12 +1,11 @@
-package com.gl.recyclerv
+package com.basickotlin.recyclerv
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.gl.R
+import com.basickotlin.R
 
 
 class RecyclerVActivity : AppCompatActivity() {

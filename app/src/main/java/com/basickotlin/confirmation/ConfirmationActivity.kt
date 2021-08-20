@@ -1,14 +1,12 @@
-package com.gl.confirmation
+package com.basickotlin.confirmation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.gl.R
-import com.gl.recyclerv.RecyclerVActivity
-import com.gl.termscondition.TermsAndConditionsActivity
+import com.basickotlin.R
+import com.basickotlin.termscondition.TermsAndConditionsActivity
 
 class ConfirmationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

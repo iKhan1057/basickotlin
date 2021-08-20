@@ -1,4 +1,4 @@
-package com.gl.recyclerv
+package com.basickotlin.recyclerv
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.gl.R
-import com.gl.login.LoginActivity
+import com.basickotlin.R
+import com.basickotlin.login.LoginActivity
 
 class FlowerAdapter(val activity: RecyclerVActivity, val flowerList: Array<String>) :
     RecyclerView.Adapter<FlowerAdapter.FlowerViewHolder>() {

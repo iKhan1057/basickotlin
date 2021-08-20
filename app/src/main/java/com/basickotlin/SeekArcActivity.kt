@@ -1,4 +1,4 @@
-package com.gl
+package com.basickotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

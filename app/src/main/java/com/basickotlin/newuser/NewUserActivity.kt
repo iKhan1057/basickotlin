@@ -1,4 +1,4 @@
-package com.gl.newuser
+package com.basickotlin.newuser
 
 import android.content.Context
 import android.content.Intent
@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.gl.R
-import com.gl.views.RoundedBottomSheetDialog
+import com.basickotlin.R
+import com.basickotlin.views.RoundedBottomSheetDialog
 import com.google.android.material.textfield.TextInputEditText
 
 class NewUserActivity : AppCompatActivity(), FlowerAdapter.Callback {

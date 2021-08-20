@@ -1,7 +1,7 @@
-package com.gl.recyclerv
+package com.basickotlin.recyclerv
 
 import android.content.Context
-import com.gl.R
+import com.basickotlin.R
 
 
 class Datasource(val context: Context) {

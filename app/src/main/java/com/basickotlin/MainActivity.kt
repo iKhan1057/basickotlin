@@ -1,12 +1,12 @@
-package com.gl
+package com.basickotlin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.e.myfeeds.FeedsActivity
-import com.gl.newuser.NewUserActivity
-import com.gl.recyclerv.RecyclerVActivity
+import com.basickotlin.newuser.NewUserActivity
+import com.basickotlin.recyclerv.RecyclerVActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

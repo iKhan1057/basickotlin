@@ -1,8 +1,8 @@
-package com.gl.tokentext
+package com.basickotlin.tokentext
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.gl.R
+import com.basickotlin.R
 
 class TextTokenActivity : AppCompatActivity() {
 

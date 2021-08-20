@@ -1,8 +1,8 @@
-package com.gl.termscondition
+package com.basickotlin.termscondition
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.gl.R
+import com.basickotlin.R
 
 class TermsAndConditionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

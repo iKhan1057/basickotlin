@@ -1,8 +1,7 @@
-package com.gl.newuser
+package com.basickotlin.newuser
 
 import android.content.Context
-import com.gl.R
-import com.gl.newuser.DataModel
+import com.basickotlin.R
 import java.util.ArrayList
 
 

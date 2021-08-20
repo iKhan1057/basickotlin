@@ -1,4 +1,4 @@
-package com.gl
+package com.basickotlin
 
 import org.junit.Test
 

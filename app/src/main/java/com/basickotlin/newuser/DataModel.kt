@@ -1,4 +1,4 @@
-package com.gl.newuser
+package com.basickotlin.newuser
 
 class DataModel {
     var name: String = ""

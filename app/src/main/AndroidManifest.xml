@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gl">
+    package="com.basickotlin">
 
     <application
         android:allowBackup="true"
@@ -9,16 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GL">
-        <activity android:name=".ShowMoreActivity"></activity>
-        <activity android:name=".tokentext.TextTokenActivity" />
-        <activity android:name=".SeekArcActivity" />
-        <activity android:name=".newuser.NewPassActivity" />
-        <activity android:name=".termscondition.TermsAndConditionsActivity" />
-        <activity android:name=".newuser.NewUserActivity" />
-        <activity android:name=".confirmation.ConfirmationActivity" />
-        <activity android:name=".recyclerv.RecyclerVActivity" />
-        <activity android:name=".login.LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.basickotlin.ShowMoreActivity"/>
+        <activity android:name="com.basickotlin.tokentext.TextTokenActivity" />
+        <activity android:name="com.basickotlin.SeekArcActivity" />
+        <activity android:name="com.basickotlin.newuser.NewPassActivity" />
+        <activity android:name="com.basickotlin.termscondition.TermsAndConditionsActivity" />
+        <activity android:name="com.basickotlin.newuser.NewUserActivity" />
+        <activity android:name="com.basickotlin.confirmation.ConfirmationActivity" />
+        <activity android:name="com.basickotlin.recyclerv.RecyclerVActivity" />
+        <activity android:name="com.basickotlin.login.LoginActivity" />
+        <activity android:name="com.basickotlin.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

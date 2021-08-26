@@ -1,7 +1,8 @@
+include ':app:custombottomsheet'
 include ':app:showmore'
 include ':app:imagepicker'
 include ':app:pageindicator'
 include ':app:myfeeds'//include ':flowlayoutlibs'
 include ':myseekbar'
 include ':app'
-rootProject.name = "GL"
+rootProject.name = "BasicKotlin"

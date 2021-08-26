@@ -14,11 +14,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.basickotlin.R
 import com.basickotlin.confirmation.ConfirmationActivity
 import com.basickotlin.views.RoundedBottomSheetDialog
+import com.e.custombottomsheet.Callbacks
+import com.e.custombottomsheet.CustomBottomSheet
 import com.google.android.material.textfield.TextInputEditText
 import java.util.*
 import java.util.regex.Pattern
 
-class NewPassActivity : AppCompatActivity() {
+class NewPassActivity : AppCompatActivity(), Callbacks {
     private val regOneLetter = ".*[a-zA-Z]+.*";
     private val regOneNo = ".*\\d.*"
     var pattern = Pattern.compile(
@@ -111,20 +113,7 @@ class NewPassActivity : AppCompatActivity() {
     }
 
     private fun bottomSheet() {
-        val mBottomSheetDialog = RoundedBottomSheetDialog(this)
-        val sheetView = layoutInflater.inflate(R.layout.dialog_pass_guidelines, null)
-        mBottomSheetDialog.setContentView(sheetView)
-        createPassGuideLine(sheetView)
-        val btn_close: Button = sheetView.findViewById(R.id.btn_close)
-        btn_close.setOnClickListener {
-            mBottomSheetDialog.dismiss()
-        }
-        mBottomSheetDialog.show()
-    }
-
-    private fun createPassGuideLine(sheetView: View) {
-        val lin_pass_guidelines: LinearLayout = sheetView.findViewById(R.id.lin_pass_guidelines)
-        val list: MutableList<String> =
+                val list: MutableList<String> =
             ArrayList()
         list.add(getString(R.string.char_count))
         list.add(getString(R.string.no_space))
@@ -134,17 +123,52 @@ class NewPassActivity : AppCompatActivity() {
         list.add(getString(R.string.no_repeat))
         list.add(getString(R.string.diff_no_user))
         list.add(getString(R.string.special_chars))
+        val bottomsheet = CustomBottomSheet(this@NewPassActivity)
+        bottomsheet.setCallbacks(this@NewPassActivity)
+        bottomsheet.title("USERNAME")
+        bottomsheet.subtitle("Profile")
+        bottomsheet.content(list)
+        bottomsheet.show()
 
-        for (i in list.indices) {
-            val inflater =
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            val rowView: View = inflater.inflate(R.layout.item_pass_guideline, null)
-            // In order to get the view we have to use the new view with text_layout in it
-            val textView: TextView = rowView.findViewById(R.id.text)
-            textView.text = list[i]
-            // Add the new row before the add field button.
-            lin_pass_guidelines.addView(rowView, i)
-        }
+
+//        val mBottomSheetDialog = RoundedBottomSheetDialog(this)
+//        val sheetView = layoutInflater.inflate(R.layout.dialog_pass_guidelines, null)
+//        mBottomSheetDialog.setContentView(sheetView)
+//        createPassGuideLine(sheetView)
+//        val btn_close: Button = sheetView.findViewById(R.id.btn_close)
+//        btn_close.setOnClickListener {
+//            mBottomSheetDialog.dismiss()
+//        }
+//        mBottomSheetDialog.show()
     }
+
+    override fun closeClicked() {
+
+    }
+
+//    private fun createPassGuideLine(sheetView: View) {
+//        val lin_pass_guidelines: LinearLayout = sheetView.findViewById(R.id.lin_pass_guidelines)
+//        val list: MutableList<String> =
+//            ArrayList()
+//        list.add(getString(R.string.char_count))
+//        list.add(getString(R.string.no_space))
+//        list.add(getString(R.string.alphabet))
+//        list.add(getString(R.string.num))
+//        list.add(getString(R.string.no_icon))
+//        list.add(getString(R.string.no_repeat))
+//        list.add(getString(R.string.diff_no_user))
+//        list.add(getString(R.string.special_chars))
+//
+//        for (i in list.indices) {
+//            val inflater =
+//                getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+//            val rowView: View = inflater.inflate(R.layout.item_pass_guideline, null)
+//            // In order to get the view we have to use the new view with text_layout in it
+//            val textView: TextView = rowView.findViewById(R.id.text)
+//            textView.text = list[i]
+//            // Add the new row before the add field button.
+//            lin_pass_guidelines.addView(rowView, i)
+//        }
+//    }
 }
 

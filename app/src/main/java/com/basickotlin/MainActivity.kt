@@ -7,11 +7,20 @@ import android.widget.Button
 import com.e.myfeeds.FeedsActivity
 import com.basickotlin.newuser.NewUserActivity
 import com.basickotlin.recyclerv.RecyclerVActivity
+import com.e.custombottomsheet.CustomBottomSheet
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        val btn_bottom_sheet: Button = findViewById(R.id.btn_bottom_sheet)
+        btn_bottom_sheet.setOnClickListener {
+            val intent = Intent(this@MainActivity, BottomSheetActivity::class.java)
+            intent.putExtra("key", "Kotlin")
+            startActivity(intent)
+        }
 
         val btn_showmore: Button = findViewById(R.id.btn_showmore)
         btn_showmore.setOnClickListener {
@@ -19,7 +28,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("key", "Kotlin")
             startActivity(intent)
         }
-
 
         val btn_seekbar: Button = findViewById(R.id.btn_seekbar)
         btn_seekbar.setOnClickListener {

@@ -16,6 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
+            android:id="@+id/btn_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Bottomsheet" />
+
+        <Button
             android:id="@+id/btn_showmore"
             android:layout_width="match_parent"
             android:layout_height="50dp"

@@ -57,7 +57,7 @@ class ShowMoreDialog : AppCompatTextView {
 
     fun setOnTextClicked(onTextClicked: onMoreClicked?) {
         this.onTextClicked = onTextClicked
-           }
+    }
 
     //set max length of the string text
     fun setTextMaxLength(maxLength: Int) {

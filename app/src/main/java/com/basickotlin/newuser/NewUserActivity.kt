@@ -16,9 +16,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.basickotlin.R
 import com.basickotlin.views.RoundedBottomSheetDialog
+import com.e.custombottomsheet.Callbacks
+import com.e.custombottomsheet.CustomBottomSheet
 import com.google.android.material.textfield.TextInputEditText
 
-class NewUserActivity : AppCompatActivity(), FlowerAdapter.Callback {
+class NewUserActivity : AppCompatActivity(), FlowerAdapter.Callback, Callbacks {
     private var isSelected: Boolean = false
     lateinit var dataselected: DataModel
     lateinit var recy_user: RecyclerView
@@ -164,20 +166,6 @@ class NewUserActivity : AppCompatActivity(), FlowerAdapter.Callback {
 
 
     private fun bottomSheet() {
-        val mBottomSheetDialog = RoundedBottomSheetDialog(this)
-        val sheetView = layoutInflater.inflate(R.layout.dialog_pass_guidelines, null)
-        mBottomSheetDialog.setContentView(sheetView)
-        createUserGuideLine(sheetView)
-        val btn_close: Button = sheetView.findViewById(R.id.btn_close)
-        btn_close.setOnClickListener {
-            mBottomSheetDialog.dismiss()
-        }
-        mBottomSheetDialog.show()
-    }
-
-
-    private fun createUserGuideLine(sheetView: View) {
-        val lin_pass_guidelines: LinearLayout = sheetView.findViewById(R.id.lin_pass_guidelines)
         val list: MutableList<String> =
             java.util.ArrayList()
         list.add(getString(R.string.char_count_user))
@@ -185,15 +173,48 @@ class NewUserActivity : AppCompatActivity(), FlowerAdapter.Callback {
         list.add(getString(R.string.composition_user))
         list.add(getString(R.string.no_ssn))
 
-        for (i in list.indices) {
-            val inflater =
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            val rowView: View = inflater.inflate(R.layout.item_pass_guideline, null)
-            // In order to get the view we have to use the new view with text_layout in it
-            val textView: TextView = rowView.findViewById(R.id.text)
-            textView.text = list[i]
-            // Add the new row before the add field button.
-            lin_pass_guidelines.addView(rowView, i)
-        }
+
+        val bottomsheet = CustomBottomSheet(this@NewUserActivity)
+        bottomsheet.setCallbacks(this@NewUserActivity)
+        bottomsheet.title("USERNAME")
+        bottomsheet.subtitle("Profile")
+        bottomsheet.content(list)
+        bottomsheet.show()
+
+//        val mBottomSheetDialog = RoundedBottomSheetDialog(this)
+//        val sheetView = layoutInflater.inflate(R.layout.dialog_pass_guidelines, null)
+//        mBottomSheetDialog.setContentView(sheetView)
+//        createUserGuideLine(sheetView)
+//        val btn_close: Button = sheetView.findViewById(R.id.btn_close)
+//        btn_close.setOnClickListener {
+//            mBottomSheetDialog.dismiss()
+//        }
+//        mBottomSheetDialog.show()
     }
+
+    override fun closeClicked() {
+
+    }
+
+
+//    private fun createUserGuideLine(sheetView: View) {
+//        val lin_pass_guidelines: LinearLayout = sheetView.findViewById(R.id.lin_pass_guidelines)
+//        val list: MutableList<String> =
+//            java.util.ArrayList()
+//        list.add(getString(R.string.char_count_user))
+//        list.add(getString(R.string.no_space))
+//        list.add(getString(R.string.composition_user))
+//        list.add(getString(R.string.no_ssn))
+//
+//        for (i in list.indices) {
+//            val inflater =
+//                getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+//            val rowView: View = inflater.inflate(R.layout.item_pass_guideline, null)
+//            // In order to get the view we have to use the new view with text_layout in it
+//            val textView: TextView = rowView.findViewById(R.id.text)
+//            textView.text = list[i]
+//            // Add the new row before the add field button.
+//            lin_pass_guidelines.addView(rowView, i)
+//        }
+//    }
 }
